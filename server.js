@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser');
 const routes = require('./routes')
@@ -8,6 +9,8 @@ server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({extended: true}))
 server.use(routes)
 
-server.listen(5000, ()=>{
+const port = process.env.PORT || 5001
+
+server.listen(port, ()=>{
     console.log('Server ligado . . .')
 })
