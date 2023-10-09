@@ -9,7 +9,7 @@ server.use(bodyParser.json())
 server.use(bodyParser.urlencoded({extended: true}))
 server.use(routes)
 
-const port = process.env.PORT || 5001
+const port = process.env.PORT || 3001
 
 server.listen(port, ()=>{
     console.log('Server ligado . . .')
